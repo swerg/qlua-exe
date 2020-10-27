@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\qlua-exe.cpp">
+    <ClCompile Include="src\qlua_exe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -71,18 +71,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir).Build\$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(OutDir).Int\</IntDir>
+    <TargetName>qlua</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x32'">
     <OutDir>$(SolutionDir).Build\$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(OutDir).Int\</IntDir>
+    <TargetName>qlua</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir).Build\$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(OutDir).Int\</IntDir>
+    <TargetName>qlua</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x32'">
     <OutDir>$(SolutionDir).Build\$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(OutDir).Int\</IntDir>
+    <TargetName>qlua</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -144,7 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\qlua-exe.cpp" />
+    <ClCompile Include="src\qlua_exe.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
