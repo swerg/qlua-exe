@@ -2,12 +2,15 @@
 // https://github.com/swerg/qlua-exe
 //
 
+#include <windows.h>
+
+#include <string>
 #include <iostream>
 
-#include <windows.h>
-#include <process.h>
-
 #include "lua.hpp"
+
+#include "qlua_functions.h"
+#include "utils.h"
 
 
 int main(int argc, char ** argv)
@@ -22,6 +25,8 @@ int main(int argc, char ** argv)
 
 	lua_State *L = luaL_newstate();
 	luaL_openlibs(L);
+
+	RegisterQLuaFunctions(L);
 
 	int error = luaL_loadfile(L, argv[1]);
 	if (!error)
@@ -40,7 +45,7 @@ int main(int argc, char ** argv)
 	if (error)
 	{
 		const char *error = lua_tostring(L, -1);
-		std::cout << "err: " << error << std::endl;
+		std::cout << "err: " << ConvertToConsole(error) << std::endl;
 	}
 
 	lua_close(L);
