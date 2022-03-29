@@ -64,7 +64,7 @@ static int qlua_getWorkingFolder(lua_State *L) {
 void RegisterQLuaFunctions(lua_State *L)
 {
 	lua_register(L, "message", qlua_message);
-	lua_register(L, "print", qlua_print);  // переопределим print на свою реализациию
+	lua_register(L, "print", qlua_print);  // РїРµСЂРµРѕРїСЂРµРґРµР»РёРј print РЅР° СЃРІРѕСЋ СЂРµР°Р»РёР·Р°С†РёРёСЋ
 	lua_register(L, "sleep", qlua_sleep);
 	lua_register(L, "getWorkingFolder", qlua_getWorkingFolder);
 }
